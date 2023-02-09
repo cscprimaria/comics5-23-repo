@@ -1,0 +1,22 @@
+---
+layout: page
+tags: 
+---
+
+<p>Estos son los trabajos de {{ page.title }}:</p>
+<div class="posts">
+
+    {% for col in site.collections %}
+      {%- if col.label == site.images_collection -%}
+        {% for post in col.docs %}
+            {%- if post.curso == page.title -%}
+              <a class="posts__link" href="{{ post.url | prepend: site.baseurl }}" >
+                    <div>
+                        <h2><strong>{{ post.numDeLista }}{{ post.apellido }}</strong> </h2>
+                  </div>
+              </a>            
+            {% endif %}
+        {% endfor %}
+      {%- endif -%}
+    {% endfor %}
+</div>

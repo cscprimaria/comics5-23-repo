@@ -1,0 +1,7 @@
+---
+layout: curso
+title: 5C
+permalink: /5c/
+---
+
+Estos son los trabajos de 5c:
